@@ -24,8 +24,8 @@
 <configuration>
 
   <property>
-    <name>dt.operator.KinesisInput.prop.initialPartitionCount</name>
-    <value>1</value>
+    <name>dt.operator.S3OutputModule.prop.maxLength</name>
+    <value>1048576</value>
   </property>
 
   <property>

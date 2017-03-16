@@ -22,12 +22,6 @@
 -->
 
 <configuration>
-
-  <property>
-    <name>dt.operator.KinesisInput.prop.initialPartitionCount</name>
-    <value>16</value>
-  </property>
-
   <property>
     <name>dt.operator.S3OutputModule.prop.maxS3UploadPartitions</name>
     <value>16</value>
