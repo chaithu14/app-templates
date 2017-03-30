@@ -20,37 +20,96 @@
 
 -->
 <configuration>
-    <property>
-      <name>dt.operator.KinesisInput.prop.accessKey</name>
-      <value>KINESIS_ACCESS_KEY</value>
-    </property>
-    <property>
-      <name>dt.operator.KinesisInput.prop.secretKey</name>
-      <value>KINESIS_SECRET_KEY</value>
-    </property>
-    <property>
-      <name>dt.operator.KinesisInput.prop.endPoint</name>
-      <value>KINESIS_END_POINT</value>
-    </property>
-    <property>
-      <name>dt.operator.KinesisInput.prop.streamName</name>
-      <value>KINESIS_STREAM_NAME</value>
-    </property>
-    <property>
-      <name>dt.operator.S3OutputModule.prop.accessKey</name>
-      <value>S3_ACCESS_KEY</value>
-    </property>
-    <property>
-      <name>dt.operator.S3OutputModule.prop.secretAccessKey</name>
-      <value>S3_SECRET_KEY</value>
-    </property>
-    <property>
-      <name>dt.operator.S3OutputModule.prop.bucketName</name>
-      <value>S3_BUCKET_NAME</value>
-    </property>
-    <property>
-      <name>dt.operator.S3OutputModule.prop.outputDirectoryPath</name>
-      <value>OUTPUT_DIRECTORY_PATH</value>
-    </property>
+  <property>
+    <name>apex.app-param.accessKeyForKinesisInput</name>
+    <description>Specify accessKey for input Kinesis</description>
+  </property>
+  <property>
+    <name>dt.operator.KinesisInput.prop.accessKey</name>
+    <value>${apex.app-param.accessKeyForKinesisInput}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.secretKeyForKinesisInput</name>
+    <description>Specify secretKey for input Kinesis</description>
+  </property>
+  <property>
+    <name>dt.operator.KinesisInput.prop.secretKey</name>
+    <value>${apex.app-param.secretKeyForKinesisInput}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.endPointForKinesisInput</name>
+    <description>Specify endPoint for input Kinesis</description>
+  </property>
+  <property>
+    <name>dt.operator.KinesisInput.prop.endPoint</name>
+    <value>${apex.app-param.endPointForKinesisInput}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.streamNameForKinesisInput</name>
+    <description>Specify the name of the stream for input Kinesis</description>
+  </property>
+  <property>
+    <name>dt.operator.KinesisInput.prop.streamName</name>
+    <value>${apex.app-param.streamNameForKinesisInput}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.accessKeyForS3Output</name>
+    <description>Specify accesskey for S3 Output</description>
+  </property>
+  <property>
+    <name>dt.operator.S3OutputModule.prop.accessKey</name>
+    <value>${apex.app-param.accessKeyForS3Output}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.secretAccessKeyForS3Output</name>
+    <description>Specify secret accesskey for S3 Output</description>
+  </property>
+  <property>
+    <name>dt.operator.S3OutputModule.prop.secretAccessKey</name>
+    <value>${apex.app-param.secretAccessKeyForS3Output}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.S3OutputBucketName</name>
+    <description>Specify the name of the bucket for S3 Output</description>
+  </property>
+  <property>
+    <name>dt.operator.S3OutputModule.prop.bucketName</name>
+    <value>${apex.app-param.S3OutputBucketName}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.S3OutputDirectoryPath</name>
+    <description>Specify path of the directory for S3 Output</description>
+  </property>
+  <property>
+    <name>dt.operator.S3OutputModule.prop.outputDirectoryPath</name>
+    <value>${apex.app-param.S3OutputDirectoryPath}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.maxNoOfS3UploadPartitions</name>
+    <value>16</value>
+    <description>Indicates the maximum number of S3 Upload Partitions</description>
+  </property>
+  <property>
+    <name>dt.operator.S3OutputModule.prop.maxS3UploadPartitions</name>
+    <value>${apex.app-param.maxNoOfS3UploadPartitions}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.minNoOfS3UploadPartitions</name>
+    <value>1</value>
+    <description>Indicates the minimum number of S3 Upload Partitions</description>
+  </property>
+  <property>
+    <name>dt.operator.S3OutputModule.prop.minS3UploadPartitions</name>
+    <value>${apex.app-param.minNoOfS3UploadPartitions}</value>
+  </property>
 </configuration>
 
