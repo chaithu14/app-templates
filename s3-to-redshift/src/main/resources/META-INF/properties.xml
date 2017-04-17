@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<configuration>
+  <property>
+    <name>apex.app-param.accessKeyForS3Input</name>
+    <description>Specify accessKey for input S3</description>
+  </property>
+  <property>
+    <name>dt.operator.S3Input.prop.accessKey</name>
+    <value>${apex.app-param.accessKeyForS3Input}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.secretKeyForS3Input</name>
+    <description>Specify secretKey for input S3</description>
+  </property>
+  <property>
+    <name>dt.operator.S3Input.prop.secretKey</name>
+    <value>${apex.app-param.secretKeyForS3Input}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.regionForS3Input</name>
+    <description>Specify region for input S3</description>
+  </property>
+  <property>
+    <name>dt.operator.S3Input.prop.region</name>
+    <value>${apex.app-param.regionForS3Input}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.bucketNameForS3Input</name>
+    <description>Specify name of the bucket for input S3</description>
+  </property>
+  <property>
+    <name>dt.operator.S3Input.prop.bucketName</name>
+    <value>${apex.app-param.bucketNameForS3Input}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.filesForScanning</name>
+    <description>Specify the comma separated files/directories to scan</description>
+  </property>
+  <property>
+    <name>dt.operator.S3Input.prop.files</name>
+    <value>${apex.app-param.filesForScanning}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.tableNameForRedshift</name>
+    <description>Specify the name of the table for redshift database.</description>
+  </property>
+  <property>
+    <name>dt.operator.RedshiftOutput.prop.tableName</name>
+    <value>${apex.app-param.tableNameForRedshift}</value>
+  </property>
+  <property>
+    <name>apex.app-param.userNameToConnectRedshift</name>
+    <description>Specify the user name to connect redshift database.</description>
+  </property>
+  <property>
+    <name>dt.operator.RedshiftOutput.prop.store.userName</name>
+    <value>${apex.app-param.userNameToConnectRedshift}</value>
+  </property>
+  <property>
+    <name>apex.app-param.userPasswordToConnectRedshift</name>
+    <description>Specify the password to connect redshift database</description>
+  </property>
+  <property>
+    <name>dt.operator.RedshiftOutput.prop.store.password</name>
+    <value>${apex.app-param.userPasswordToConnectRedshift}</value>
+  </property>
+  <property>
+    <name>apex.app-param.jdbcUrlOfRedshift</name>
+    <description>Specify the jdbc url of the cluster.</description>
+  </property>
+  <property>
+    <name>dt.operator.RedshiftOutput.prop.store.databaseUrl</name>
+    <value>${apex.app-param.jdbcUrlOfRedshift}</value>
+  </property>
+  <property>
+    <name>apex.app-param.jdbcDriverOfRedshift</name>
+    <description>Specify the jdbc driver of the Redshift cluster.</description>
+  </property>
+  <property>
+    <name>dt.operator.RedshiftOutput.prop.store.databaseDriver</name>
+    <value>${apex.app-param.jdbcDriverOfRedshift}</value>
+  </property>
+
+</configuration>
+
