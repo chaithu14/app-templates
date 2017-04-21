@@ -36,7 +36,7 @@
     <!-- change this if you desire to use a different version of Apex Core -->
     <apex.version>3.4.0</apex.version>
     <apex.apppackage.classpath>lib/*.jar</apex.apppackage.classpath>
-    <malhar.version>3.7.0-SNAPSHOT</malhar.version>
+    <malhar.version>3.7.0</malhar.version>
     <skipTests>true</skipTests>
     <apex.apppackage.tags>app-template, db, hdfs, PostgreSQL, sync</apex.apppackage.tags>
     <apex.apppackage.longDescription>README.md</apex.apppackage.longDescription>

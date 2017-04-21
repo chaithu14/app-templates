@@ -13,7 +13,7 @@
 
   <properties>
     <apex.version>3.6.0-SNAPSHOT</apex.version>
-    <malhar.version>3.7.0-SNAPSHOT</malhar.version>
+    <malhar.version>3.7.0</malhar.version>
     <apex.apppackage.classpath>lib/*.jar</apex.apppackage.classpath>
     <apex.apppackage.tags>app-template, hdfs, s3, sync</apex.apppackage.tags>
     <apex.apppackage.longDescription>README.md</apex.apppackage.longDescription>
