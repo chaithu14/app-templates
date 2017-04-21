@@ -19,14 +19,23 @@
 
 package com.datatorrent.apps;
 
+import java.util.Map;
+
 import javax.validation.constraints.Min;
 
 import com.datatorrent.api.DAG;
 import com.datatorrent.api.StreamingApplication;
 import com.datatorrent.api.annotation.ApplicationAnnotation;
+import com.datatorrent.contrib.formatter.CsvFormatter;
+import com.datatorrent.contrib.parser.CsvParser;
+import com.datatorrent.lib.transform.TransformOperator;
 
 import org.apache.apex.malhar.lib.db.redshift.RedshiftJdbcTransactionableOutputOperator;
+import org.apache.apex.malhar.lib.db.redshift.RedshiftOutputModule;
+import org.apache.apex.malhar.lib.fs.s3.S3RecordReaderModule;
 import org.apache.hadoop.conf.Configuration;
+
+import com.google.common.collect.Maps;
 
 import static com.datatorrent.api.Context.OperatorContext.TIMEOUT_WINDOW_COUNT;
 
@@ -58,6 +67,22 @@ public class Application implements StreamingApplication
   @Override
   public void populateDAG(DAG dag, Configuration conf)
   {
+
+    S3RecordReaderModule inputModule = dag.addModule("S3Input", new S3RecordReaderModule());
+    CsvParser csvParser = dag.addOperator("csvParser", CsvParser.class);
+    TransformOperator transform = dag.addOperator("transform", new TransformOperator());
+    Map<String, String> expMap = Maps.newHashMap();
+    expMap.put("name", "{$.name}.toUpperCase()");
+    transform.setExpressionMap(expMap);
+    CsvFormatter formatter = dag.addOperator("formatter", new CsvFormatter());
+    RedshiftOutputModule redshiftOutput = dag.addModule("RedshiftOutput", new RedshiftOutputModule());
+
+    dag.addStream("data", inputModule.records, csvParser.in);
+    dag.addStream("pojo", csvParser.out, transform.input);
+    dag.addStream("transformed", transform.output, formatter.in);
+    //dag.addStream("string", formatter.out, redshiftOutput.input);
+
+
     // Add S3 as input and Redshift as output operators respectively to dag.
     S3InputOperator inputOperator = dag.addOperator("S3Input", new S3InputOperator());
     inputOperator.setBlocksThreshold(1);
