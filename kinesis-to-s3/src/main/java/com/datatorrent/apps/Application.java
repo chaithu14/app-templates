@@ -22,6 +22,7 @@ package com.datatorrent.apps;
 import com.datatorrent.api.DAG;
 import com.datatorrent.api.StreamingApplication;
 import com.datatorrent.api.annotation.ApplicationAnnotation;
+import com.datatorrent.contrib.kinesis.KinesisByteArrayInputOperator;
 
 import org.apache.apex.malhar.lib.fs.s3.S3TupleOutputModule;
 import org.apache.hadoop.conf.Configuration;

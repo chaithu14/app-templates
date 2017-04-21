@@ -9,21 +9,21 @@ The Kinesis S3 Application Template continuously ingest messages from Kinesis an
 Import the application from DataTorrent AppHub and launch it to ingest data from Kinesis to Amazon S3. Follow the tutorial videos or walkthrough document below to launch the template and run it.
 
 ### Jumpstart
-Import and run application template as an operable proof of concept. Please watch the [walkthrough video](Update link location here) to import and launch the application.
+Import and run application template as an operable proof of concept. Please watch the [walkthrough video](https://www.youtube.com/watch?v=cQauyix5_XY) to import and launch the application.
 
-<iframe src="Update link location here" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>
+<iframe src="https://www.youtube.com/watch?v=cQauyix5_XY?enablejsapi=1" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>
 
 ### Logical Plan
 
 Here is a preview of the logical plan of the application template
 
-![Logical Plan](Update Link here)
+![Logical Plan](https://www.datatorrent.com/wp-content/uploads/2017/04/Kinesis_to_S3_DAG.jpg)
 
 ### Launch App Properties
 
 Here is a preview of the properties to be set at application launch
 
-![Launch App Properties](Update Link here)
+![Launch App Properties](https://www.datatorrent.com/wp-content/uploads/2017/04/Kinesis_to_S3_properties.png)
 
 ### Resources
 
