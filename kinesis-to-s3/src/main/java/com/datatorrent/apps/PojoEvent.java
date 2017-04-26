@@ -24,7 +24,7 @@ public class PojoEvent
   @Override
   public String toString()
   {
-    return "PojoEvent [accountNumber=" + accountNumber + ", name=" + name + ", amount=" + amount + "]";
+    return accountNumber + "|" + name + "|" + amount;
   }
 
   private int accountNumber;

@@ -93,6 +93,16 @@
   </property>
 
   <property>
+    <name>apex.app-param.SizeOfS3FileInBytes</name>
+    <description>Specify the size of S3 file in bytes. By default, the size is 128 MB</description>
+    <value>134217728</value>
+  </property>
+  <property>
+    <name>dt.operator.S3OutputModule.prop.maxLength</name>
+    <value>${apex.app-param.SizeOfS3FileInBytes}</value>
+  </property>
+
+  <property>
     <name>apex.app-param.maxNoOfS3UploadPartitions</name>
     <value>16</value>
     <description>Indicates the maximum number of S3 Upload Partitions</description>
