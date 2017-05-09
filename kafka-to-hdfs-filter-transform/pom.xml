@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.datatorrent.apps</groupId>
-  <version>0.8</version>
+  <version>0.9.0</version>
   <artifactId>kafka-to-hdfs-filter-transform</artifactId>
   <packaging>jar</packaging>
 
@@ -16,7 +16,7 @@
   <properties>
     <!-- change this if you desire to use a different version of Apex Core -->
     <apex.version>3.4.0</apex.version>
-    <malhar.version>3.7.0-SNAPSHOT</malhar.version>
+    <malhar.version>3.7.0</malhar.version>
     <apex.apppackage.classpath>lib/*.jar</apex.apppackage.classpath>
     <skipTests>true</skipTests>
     <apex.apppackage.tags>app-template, kafka, hdfs, filter, transform, process</apex.apppackage.tags>
