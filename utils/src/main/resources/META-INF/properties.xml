@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+
+-->
+<configuration>
+  <property>
+    <name>apex.app-param.accessKeyForKinesisOutput</name>
+    <description>Specify accessKey for Kinesis</description>
+  </property>
+  <property>
+    <name>dt.operator.KinesisOutput.prop.accessKey</name>
+    <value>${apex.app-param.accessKeyForKinesisOutput}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.secretKeyForKinesisOutput</name>
+    <description>Specify secretKey for Kinesis</description>
+  </property>
+  <property>
+    <name>dt.operator.KinesisOutput.prop.secretKey</name>
+    <value>${apex.app-param.secretKeyForKinesisOutput}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.endPointForKinesisOutput</name>
+    <description>Specify endPoint for Kinesis</description>
+  </property>
+  <property>
+    <name>dt.operator.KinesisOutput.prop.endPoint</name>
+    <value>${apex.app-param.endPointForKinesisOutput}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.streamNameForKinesisOutput</name>
+    <description>Specify the name of the stream for Kinesis output</description>
+  </property>
+  <property>
+    <name>dt.operator.KinesisOutput.prop.streamName</name>
+    <value>${apex.app-param.streamNameForKinesisOutput}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.batchSizeForKinesisOutput</name>
+    <description>Specify the batch size for writing the tuples to Kinesis</description>
+    <value>500</value>
+  </property>
+  <property>
+    <name>dt.operator.KinesisOutput.prop.batchSize</name>
+    <value>${apex.app-param.batchSizeForKinesisOutput}</value>
+  </property>
+
+  <property>
+    <name>apex.app-param.tupleBlastForGenerator</name>
+    <description>Specify the number of tuples emitted in each window</description>
+    <value>100</value>
+  </property>
+  <property>
+    <name>dt.operator.Generate.prop.tupleBlast</name>
+    <value>${apex.app-param.tupleBlastForGenerator}</value>
+  </property>
+</configuration>
