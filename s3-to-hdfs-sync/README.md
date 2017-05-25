@@ -29,7 +29,7 @@ Here is a preview of the properties to be set at application launch
 
 Please find the walkthrough docs for app template as follows:
 
-&nbsp; <a href="http://http://docs.datatorrent.com/app-templates/s3-to-hdfs-sync/"  class="docs" id="docs" ga-track="docs" target="_blank">http://http://docs.datatorrent.com/app-templates/s3-to-hdfs-sync/</a>
+&nbsp; <a href="http://docs.datatorrent.com/app-templates/s3-to-hdfs-sync/"  class="docs" id="docs" ga-track="docs" target="_blank">http://docs.datatorrent.com/app-templates/s3-to-hdfs-sync/</a>
 
 Please find the GitHub URL for app template as follows:
 
