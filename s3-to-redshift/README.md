@@ -7,7 +7,7 @@ The S3 Redshift Application Template continuously scans the directory and import
 
 Import the application from DataTorrent AppHub and launch it to import data from Amazon S3 to Redshift database. Follow the tutorial videos or walkthrough document below to launch the template and run it.
 
-### Jumpstart
+### Quickstart
 Import and run application template as an operable proof of concept. Please watch the [walkthrough video](Update link location here) to import and launch the application.
 
 <iframe src="Update link location here" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>

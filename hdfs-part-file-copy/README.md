@@ -9,7 +9,7 @@ The HDFS to HDFS part file copy Application Template continuously ingest files a
 
 Import the application from DataTorrent AppHub and follow the tutorial videos or walkthrough document below to launch the template and run it.
 
-### Jumpstart
+### Quickstart
 Import and run the application template as an operable proof of concept. Please watch the [walkthrough video](Update link location here) to import and launch the application.
 
 <iframe src="Update link location here" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>

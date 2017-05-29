@@ -8,7 +8,7 @@ The HDFS S3 Sync Application Template continuously ingests files as blocks and b
 
 Import the application from DataTorrent AppHub and launch it to ingest data from HDFS to Amazon S3. Follow the tutorial videos or walkthrough document below to launch the template and run it.
 
-### Jumpstart
+### Quickstart
 Import and run application template as an operable proof of concept. Please watch the [walkthrough video](Update link location here) to import and launch the application.
 
 <iframe src="Update link location here" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>

@@ -9,7 +9,7 @@ The Kafka to Cassandra transform application ingest messages in JSON string form
 
 Import the application from DataTorrent AppHub and launch it to ingest messages in JSON string format from configured kafka topic and writes each message as a record in cassandra store with transformation. Follow the tutorial videos or walkthrough document below to launch the template and add custom logic to process the data during ingestion.
 
-### Jumpstart
+### Quickstart
 Import and run application template as an operable proof of concept. Please watch the [walkthrough video](https://www.youtube.com/watch?v=) for more details.
 
 <iframe src="https://www.youtube.com/embed" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>

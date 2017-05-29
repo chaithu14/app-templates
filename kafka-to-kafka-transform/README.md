@@ -9,7 +9,7 @@ The Kafka process kafka application ingests data from kafka, process them and wr
 
 Import the application from DataTorrent AppHub and launch it to ingest messages from kafka, process them and write back to kafka. Follow the tutorial videos or walkthrough document below to launch the template and add custom logic to process the data during ingestion.
 
-### Jumpstart
+### Quickstart
 Import and run application template as an operable proof of concept. Please watch the [walkthrough video](https://www.youtube.com/watch?v=) to import and launch the application.
 
 <iframe src="https://www.youtube.com/embed" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>

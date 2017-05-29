@@ -8,7 +8,7 @@ The HDFS to HDFS with transform Application Template continuously ingests files 
 
 Import the application from DataTorrent AppHub and launch it to ingest data from one Hadoop cluster to another.  Follow the tutorial videos or walkthrough document below to launch the template and add custom logic to process the data during ingestion.
 
-### Jumpstart
+### Quickstart
 Import and run application template as an operable proof of concept. Please watch the [walkthrough video](https://www.youtube.com/watch?v=z20xzkQeJho) to import and launch the application.
 
 <iframe src="https://www.youtube.com/embed/z20xzkQeJho?enablejsapi=1" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>

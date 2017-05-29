@@ -11,7 +11,7 @@ To customize this application, user can configure it to run it with different sc
 
 Import the application from DataTorrent AppHub and launch it for the desired functionality. Follow the tutorial videos or walkthrough document below to launch the template and add custom logic to process the data during ingestion.
 
-### Jumpstart
+### Quickstart
 Import and run application template as an operable proof of concept. Please watch the [walkthrough video](https://www.youtube.com/watch?v=taHc_QJUfBg) to import and launch the application.
 
 <iframe src="https://basic-video-link?enablejsapi=1" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>

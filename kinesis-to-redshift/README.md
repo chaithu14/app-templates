@@ -13,7 +13,7 @@ Import the application from DataTorrent AppHub and launch it to ingest records s
 - Input Source:- AWS Kinesis (version: 1.9.10)
 - Output Source:- AWS Redshift JDBC driver (version: 1.2.1.1001)
 
-### Jumpstart
+### Quickstart
 Import and run application template as an operable proof of concept. Please watch the [walkthrough video](https://ADD_LINK) to import and launch the application.
 
 <iframe src="https://www.youtube.com/embed/Datatorrent" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>

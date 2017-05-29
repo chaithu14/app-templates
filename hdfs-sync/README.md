@@ -8,7 +8,7 @@ The HDFS to HDFS Sync Application Template continuously ingests files as blocks 
 
 Import the application from DataTorrent AppHub and launch it to ingest data from one Hadoop cluster to another. Follow the tutorial videos or walkthrough document below to launch the template and run it.
 
-### Jumpstart
+### Quickstart
 Import and run application template as an operable proof of concept. Please watch the [walkthrough video](https://www.youtube.com/watch?v=KWcEvyNtyLI) to import and launch the application.
 
 <iframe src="https://www.youtube.com/embed/KWcEvyNtyLI?enablejsapi=1" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>

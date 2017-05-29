@@ -13,7 +13,7 @@ Import the application from DataTorrent AppHub and launch it to ingest your data
 - Input Source:- PostgreSQL (version: 9.4.10)
 - Output Source:- PostgreSQL (version: 9.4.10)
 
-### Jumpstart
+### Quickstart
 Import and run application template as an operable proof of concept. Please watch the [walkthrough video](https://www.youtube.com/watch?v=EEvRMALP1nk) to import and launch the application.
 
 <iframe src="https://www.youtube.com/embed/EEvRMALP1nk?enablejsapi=1" allowfullscreen="allowfullscreen" class="video" id="basicVideo" ga-track="basicVideo"></iframe>
