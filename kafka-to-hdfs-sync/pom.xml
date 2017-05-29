@@ -18,7 +18,6 @@
     <apex.version>3.4.0</apex.version>
     <malhar.version>3.5.0</malhar.version>
     <apex.apppackage.classpath>lib/*.jar</apex.apppackage.classpath>
-    <skipTests>true</skipTests>
     <apex.apppackage.tags>app-template, hdfs, kafka, sync</apex.apppackage.tags>
     <apex.apppackage.longDescription>README.md</apex.apppackage.longDescription>
   </properties>

@@ -80,18 +80,15 @@ public class Application implements StreamingApplication
      * dag.addStream("pojo", csvParser.out, transform.input);
      * dag.addStream("transformed", transform.output, formatter.in);
      * dag.addStream("string", formatter.out, fileOutput.input);
-     * 
+     *
      * In ApplicationTests.java->
-     * Replace the following line from setup()
-     * outputFilePath = outputDir + "/output.txt_2.0";
-     * with
-     * outputFilePath = outputDir + "/output.txt_5.0";
-     * 
      * Replace the following line from compare()
      * Assert.assertArrayEquals(lines, output.split("\\n"));
      * with
      * Assert.assertArrayEquals(lines_transformed, output.split("\\n"));
-     * 
+     *
+     * Note: "lines" is the output ref to the application which is under uncommented DAG and "lines_transformed"
+     *        output belongs to the custom logic DAG.
      */
   }
 

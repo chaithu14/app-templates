@@ -19,15 +19,10 @@
 
 package com.datatorrent.apps;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 
 import javax.validation.ConstraintViolationException;
-
-import org.apache.apex.malhar.kafka.AbstractKafkaInputOperator;
 import org.apache.commons.io.FileUtils;
 import org.apache.hadoop.conf.Configuration;
 
@@ -47,8 +42,6 @@ import kafka.producer.KeyedMessage;
 
 import com.datatorrent.api.LocalMode;
 
-import static org.junit.Assert.assertTrue;
-
 /**
  * Test the DAG declaration in local mode.
  */
@@ -58,7 +51,7 @@ public class ApplicationTest
   private static final int zkPort = 12181;
   private static final int brokerPort = 19092;
   private String outputDir;
-  private String outputFilePath;
+  private String outputFileName;
   private String topic;
 
   public static class TestMeta extends TestWatcher
@@ -91,7 +84,6 @@ public class ApplicationTest
   public void setup() throws Exception
   {
     outputDir = testMeta.baseDirectory + File.separator + "output";
-    outputFilePath = outputDir + "/output.txt_2.0";
   }
 
   // test messages
@@ -148,6 +140,7 @@ public class ApplicationTest
     conf.addResource(this.getClass().getResourceAsStream("/META-INF/properties-test.xml"));
     conf.set("dt.operator.fileOutput.prop.filePath", outputDir);
     topic = conf.get("dt.operator.kafkaInput.prop.topics");
+    outputFileName = conf.get("dt.operator.fileOutput.prop.outputFileName");
 
     return conf;
   }
@@ -164,22 +157,44 @@ public class ApplicationTest
 
   private void chkOutput() throws Exception
   {
-    File file = new File(outputFilePath);
     final int MAX = 60;
-    for (int i = 0; i < MAX && (!file.exists()); ++i) {
+    boolean isFileExist = false;
+    for (int i = 0; i < MAX; ++i) {
       LOG.debug("Sleeping, i = {}", i);
       Thread.sleep(1000);
+      File[] files = new File(outputDir).listFiles();
+      if (files == null) {
+        continue;
+      }
+      for (File file : files) {
+        if (file.isFile() && file.getName().contains(outputFileName)
+          && !file.getName().endsWith(".tmp")) {
+          isFileExist = true;
+        }
+      }
+      if (isFileExist) {
+        break;
+      }
     }
-    if (!file.exists()) {
-      String msg = String.format("Error: %s not found after %d seconds%n", outputFilePath, MAX);
+    if (!isFileExist) {
+      String msg = String.format("Error: %s not found after %d seconds%n", outputFileName, MAX);
       throw new RuntimeException(msg);
     }
   }
 
   private void compare() throws Exception
   {
+    // Get the output file
+    String outputFilePath = "";
+    File[] files = new File(outputDir).listFiles();
+    for (File file : files) {
+      if (file.isFile() && file.getName().contains(outputFileName)) {
+        outputFilePath = file.getPath();
+      }
+    }
     // read output file
     File file = new File(outputFilePath);
+    LOG.info("Compare: {} -> {}", file.getPath(), file.getName());
     String output = FileUtils.readFileToString(file);
     Assert.assertArrayEquals(lines, output.split("\\n"));
   }
