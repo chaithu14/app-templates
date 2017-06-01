@@ -19,6 +19,7 @@
 
 package com.datatorrent.apps;
 
+import com.datatorrent.api.Context;
 import com.datatorrent.api.DAG;
 import com.datatorrent.api.StreamingApplication;
 import com.datatorrent.api.annotation.ApplicationAnnotation;
@@ -37,9 +38,12 @@ public class Application implements StreamingApplication
     FSInputModule input = dag.addModule("HDFSInputModule", new FSInputModule());
     PartFileWriter output = dag.addOperator("PartFileCopy", new PartFileWriter());
 
+    dag.setInputPortAttribute(output.input, Context.PortContext.PARTITION_PARALLEL, true);
+    dag.setInputPortAttribute(output.blockMetadataInput, Context.PortContext.PARTITION_PARALLEL, true);
+
     // Create a stream for blockData, fileMetadata, blockMetadata from Input to PartFileWriter
     dag.addStream("BlocksMetaData", input.blocksMetadataOutput, output.blockMetadataInput).setLocality(DAG.Locality.CONTAINER_LOCAL);
     dag.addStream("BlocksData", input.messages, output.input).setLocality(DAG.Locality.CONTAINER_LOCAL);
-    dag.addStream("FileMetaData", input.filesMetadataOutput, output.fileMetadataInput).setLocality(DAG.Locality.CONTAINER_LOCAL);
+    dag.addStream("FileMetaData", input.filesMetadataOutput, output.fileMetadataInput);
   }
 }

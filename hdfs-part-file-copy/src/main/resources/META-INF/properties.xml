@@ -47,6 +47,15 @@
     <name>dt.operator.HDFSInputModule.prop.maxReaders</name>
     <value>${apex.app-param.maximumReadersForDynamicPartitioning}</value>
   </property>
+  <property>
+    <name>apex.app-param.minimumReadersForDynamicPartitioning</name>
+    <value>1</value>
+    <description>Specify minimum readers for dynamic partitioning.</description>
+  </property>
+  <property>
+    <name>dt.operator.HDFSInputModule.prop.minReaders</name>
+    <value>${apex.app-param.minimumReadersForDynamicPartitioning}</value>
+  </property>
 
   <property>
     <name>apex.app-param.numberOfBlocksPerWindow</name>
